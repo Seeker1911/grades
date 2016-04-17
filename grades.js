@@ -16,7 +16,11 @@ var B = 81;
 var C = 71;
 var D = 61;
 var F = 50;
-
+var aes = 0;
+var bes = 0;
+var ces = 0;
+var des = 0;
+var fes = 0;
 var scores = [82, 71, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87];
 
 for (var i = 0; i < scores.length; i++) {
@@ -24,13 +28,32 @@ for (var i = 0; i < scores.length; i++) {
 
     if (scores[i] >= A) {
         console.log("grade A: ", scores[i]);
+        console.log("how many?", aes += 1);
     } else if (scores[i] >= B) {
         console.log("grade B: ", scores[i]);
+        console.log("how many?", bes += 1);
     } else if (scores[i] >= C) {
         console.log("grade C: ", scores[i]);
+        console.log("how many?", ces += 1);
     } else if (scores[i] >= D) {
         console.log("grade D: ", scores[i]);
+        console.log("how many?", des += 1);
     } else if (scores[i] >= F) {
         console.log("grade F: ", scores[i]);
+        console.log("how many?", fes += 1);
     };
 };
+//how many of each grade are there? 
+console.log("There are ", aes + " A's");
+console.log("There are ", bes + " B's");
+console.log("There are ", ces + " C's");
+console.log("There are ", des + " D's");
+console.log("There are ", fes + " F's");
+//What is the lowest grade?
+scores.sort();
+console.log("sort:", scores);
+console.log("The highest score is: ", scores.pop());
+console.log("The lowest score is: ", scores.shift() + ". Sorry Joe, better luck next time." );
+
+
+
